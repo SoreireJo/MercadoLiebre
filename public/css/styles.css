@@ -1,0 +1,817 @@
+/*
+Paleta de colores:
+
+Amarillo: #EAC926;
+Azul: #03264C;
+Celeste: #1259c3;
+Gris oscuro: #666;
+Gris claro: #ebebeb;
+Verde: #39b54a;
+*/
+
+:root{
+    --color-mliebre-back: #EAC926;
+    --color-body-back: #ebebeb;
+    --color-item: black;
+    --color-select-option: #0407b9;
+    --color-select-option-shdw: rgb(36, 25, 99);
+    --color-select-border: #3f3d3d;
+    --color-button-item: white;
+    --color-button:#140a6d;
+    --color-button-form:#d8d8d5;
+    --color-input-back: #dfdddd;
+    --color-input-border: rgb(18, 10, 126);
+    --color-input-item: #666;
+    --color-input-data: rgb(18, 10, 126);
+    --color-search-back: white;
+    --color-section-article-back: white;
+    --color-article-back: white;
+    --color-article-border: #ebebeb;
+    --color-article-title: #666;
+    --color-article-title-shdw: rgb(100,100,100);
+    --color-discount: #39b54a;
+    --color-footer-back: var(--color-mliebre-back);
+    --color-footer-item: var(--color-item);
+    --color-footer-item-select: var(--color-select-option);
+}
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-size: 20px;
+    box-sizing: border-box;
+}
+
+.linea{ height: .8rem; }
+
+.media-linea{ height: .4rem; }
+
+.bocadito{ height: .1rem; width: .5rem; }
+
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--color-body-back);
+}
+
+
+h3{
+    font-size: 20px;
+}
+
+p{
+    font-size: 12px;
+}
+
+
+/* -----------------------------------*/
+/* ----------- Cabecera --------------*/
+/* -----------------------------------*/
+header {
+    background-color: var(--color-mliebre-back);
+    margin: 0px;
+    padding: 0px;
+    height: auto;
+}
+div.top-header{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    justify-content: space-around;
+} 
+
+
+/* -----------------------------------*/
+/* - Buscar productos, marcas y mas  -*/
+/* -----------------------------------*/
+div.form-search{
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    padding: 1%;
+}
+
+
+header .form-search .submit-search{
+    display: flex;
+    flex-direction: row;
+    border-radius: 7px;
+    padding: 2px 2px 2px 5px;
+    font-size: 16px;
+    background-color: var(--color-search-back);
+    border: solid 1px var(--color-select-border);
+    color: var(--color-input-item);
+    width: auto;
+}
+
+header .form .submit{
+    padding: 0px 0px 0px 5px;
+    font-size: 16px;
+    color: var(--color-input-item);
+    width: 10%;
+}
+
+
+/* ---------------------------------------------*/
+/* - Comprá en cuotas y sin tarjeta de crédito -*/
+/* ---------------------------------------------*/
+header div.top-header p{
+    width: 100%;
+    text-align: center;
+    font-size: 1em;
+    margin-top: 20px;
+}
+
+
+/* -------------------------------*/
+/* ----------- logo --------------*/
+/* -------------------------------*/
+header div.logo,
+header .form{
+    width: 50%;
+    padding: 0px 0px 0px 0px;
+}
+
+
+header div.logo{
+    padding: 10px;
+    width: 19rem;
+}
+
+top-span-2{
+    font-size: 15px;
+}
+
+span.iconito{
+    padding: 5px;
+}
+
+div.submit:hover span.iconito i{
+    color: var(--color-select-option);
+}
+
+p:hover span.iconito{
+    color: var(--color-select-option);
+}
+
+
+/* ----------------------------*/
+/* ------ Items Top Nav -------*/
+/* ----------------------------*/
+.top-nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    color: var(--color-item);
+}
+
+.p2{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+
+header ul li{
+    list-style-type: none;
+}
+
+
+header ul li a{
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 7px;
+    color: var(--color-item);
+}
+
+
+.top-span-2, .input-search,
+header ul li a{
+    font-size: 16px;
+}
+
+.top-ul-1{
+    height: 8rem;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.top-ul-2{
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-li-2{
+    margin-bottom: 1rem;
+}
+
+
+header ul li a:hover{
+    color: var(--color-select-option);
+    padding-left: 5px;
+    font-weight: bold;
+    border-bottom: solid 2px var(--color-select-border);
+}
+
+header .nav .li {
+    padding: 5px 0px 5px 10px; 
+    margin-bottom: 0.5em;
+}
+
+
+/* ----------------------------*/
+/* ------- Burguer Menu -------*/
+/* ----------------------------*/
+div.burger-menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.burger-menu i{
+    background-color: var(--color-button);
+    border-radius: 5px;
+    color: var(--color-button-item);
+    font-size: 20px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+}
+
+div.burger-menu i:hover{
+    background-color: var(--color-select-option);
+    box-shadow: 0px 1px 2px var(--color-select-option-shdw);
+}   
+
+
+/* --------------*/
+/* --- Banners ---*/
+/* --------------*/
+section.banner img{
+    width: 100%;
+}
+
+section.banner-med{
+    display: flex;
+    justify-content: center;
+}
+
+section.banner-med img{
+    width: 85%;
+}
+
+
+/* ----------------------------*/
+/* ------ Form Registro -------*/
+/* ----------------------------*/
+.register form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    padding: 3% 0% 3% 0%;
+    margin: .5em;
+}
+
+.title-block{
+    display: flex;
+    color: var(--color-input-data);
+}
+
+.subtitle-block{
+    display: flex;
+    flex-direction: column;
+    color: var(--color-article-title);
+}
+
+.label-1{
+    font-size: 13px;
+    font-weight: bold;
+    color: var(--color-input-data);
+}
+
+.label-op{
+    font-size: 13px;
+}
+
+.input-1{
+    font-size: 15px;
+    color: var(--color-input-data);
+    background-color: var(--color-article-back);
+    border-radius: 7px;
+    border-bottom: 2px solid var(--color-article-title);
+    margin:3px;
+    padding: 3px;
+}
+
+div.input-block{
+    display:flex;
+    flex-direction: column;
+}
+
+div.options-block{
+    width: 100%;
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+div.option-block{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    color: var(--color-input-data);
+}
+
+
+div.buttons-block{
+    width: 80%;
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+#prof{
+    width: 80%;
+    justify-content: space-around;
+}
+
+#nya, #dom{
+    width: 100%;
+}
+
+#usr, #e-m, #psw, #pswr, #but{
+    width: 70%;
+}
+
+#pic, #psws{
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+#psws{
+    align-items: center;
+}
+
+#but{
+    justify-content: space-around;
+}
+
+#img i{
+    color: var(--color-article-title);
+    background-color: var(--color-article-back);
+    border-radius: 12px;
+    border: 2px solid var(--color-article-title);
+    padding: 5px;
+}
+
+div.input-block #prof{
+    color: var(--color-button);
+    display: flex;
+    flex-direction: row;
+}
+
+.button-form{
+    width: auto;
+    margin:3px;
+    padding: 8px 15px 8px 15px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: var(--color-button-form);
+}
+
+#up-img{
+    color: black;
+}
+
+#cancel{
+    color: rgb(105, 16, 16);
+}
+
+#ok{
+    color: rgb(10, 82, 28);
+}
+
+
+/* -------------------------*/
+/* ------ Form Login -------*/
+/* -------------------------*/
+.login form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    padding: 3% 0% 3% 0%;
+    margin: .5em;
+}
+
+
+/* --------------------------------*/
+/* -- Basado en tu Última Visita --*/
+/* -------------------------------*/
+main{
+    width: 90%;
+    margin: 0 auto;
+}
+
+main section h3{
+    margin: 20px 0px;
+}
+
+main section article{
+    background-color: var(--color-section-article-back);    
+    margin: 10px 0px;
+}
+
+main section article img{
+    width: 100%;
+}
+
+section.last-visit,
+section.offers{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+/* -------------------------------*/
+/* ---- Detalles del Artículo ----*/
+/* -------------------------------*/
+article div.main-article{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: baseline;
+    border-top: 1px solid var(--color-article-border);
+    background-color: var(--color-article-back);
+    position: relative;
+    padding: 15px;
+}
+
+/* ----------------*/
+/* ---- Precio ----*/
+/* ----------------*/
+.price{
+    font-size: 18px;
+    width: 30%;
+}
+
+
+/* -------------------*/
+/* ---- Descuemto ----*/
+/* -------------------*/
+main section article i,
+.discount{
+    width: 70%;
+    color: var(--color-discount);
+}
+
+.discount{
+    font-size: 16px;
+    font-weight: normal;
+}
+
+h3{
+    color: var(--color-article-title);
+}
+
+
+/* salí si querés! */
+.description{
+    display:"none";
+    color: var(--color-article-back);
+    font-size: 0px;
+    font-weight: normal;
+}
+
+
+main section article.description {
+    display:"none";
+}
+
+
+main section article:hover .description {
+    display:"block";
+    color: var(--color-article-title);
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+
+main section article:hover {
+    box-shadow: 0px 0px 25px var(--color-article-title-shdw);
+}
+
+
+
+/* -------------------*/
+/* ---- Truckcito ----*/
+/* -------------------*/
+main section article i{
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--color-discount);
+    background-color: var(--color-article-back);
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: -15px;
+}
+
+/*
+.icon::before {
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+
+// Step 2: Reference Individual Icons //
+main section article i::before {
+    font: var(--fa-font-solid);
+    content: "\f007";
+}
+*/
+
+main section article:hover i{
+    transition: transform .8s;
+    transform: rotate(-90deg);
+}
+
+
+/* -------------------------------*/
+/* ------- Pie de Página ---------*/
+/* -------------------------------*/
+h5{
+    font-size: 16px;
+    padding-bottom: 5px;
+}
+
+h6{
+    font-size: 13px;
+    padding-top: 5px;
+}
+
+p.cc{
+    font-size: 14px;
+    padding-bottom: 18px;
+    margin-left: 12px;
+}
+
+
+footer ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+}
+
+footer ul li{
+    list-style-type: none;
+}
+
+footer{
+    padding: 5%;
+    background-color: var(--color-footer-back);
+    margin-top: 15px;
+}
+
+ul li.foot-li a{
+    color: var(--color-footer-item);
+}
+
+ul li.foot-li a i{
+    margin-bottom: 10px;
+    font-size: 1.45em;
+}
+
+ul li.foot-li:hover i{
+    color: var(--color-footer-item-select);
+}
+
+
+/* sub-footer */
+.sub-footer{
+    width: 100%;
+    padding: 7px;
+    background-color: var(--color-button);
+    color: var(--color-button-item);
+}
+
+
+/* -------------------------------*/
+/* ------- Media Querys ----------*/
+/* -------------------------------*/
+article div.main-article{
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+/* -------------------------------*/
+/* ------- Media Querys ----------*/
+/* -------------------------------*/
+/* ----------- -250 --------------*/
+/* -------------------------------*/
+@media (min-width: 250px){
+    main section article:hover .description2{
+        display: inline; 
+    }
+    article div.main-article{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        
+    }
+    .discount{
+        text-align: center;
+    }
+}
+
+
+/* -------------------------------*/
+/* ------- Media Querys ----------*/
+/* -------------------------------*/
+/* ----------- +360 --------------*/
+/* -------------------------------*/
+@media (min-width: 361px){
+    main section article:hover .description2{
+        display: inline; 
+    }
+
+    article div.main-article{
+        flex-direction: column;
+    }
+
+    main section article{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+
+    main section div.products{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    
+    main section div.products article{
+        width: 45%;
+    }
+
+    .price,
+    .discount{
+        width: 50%;
+    }
+
+    div.options-block{
+        flex-direction: row;
+    }
+}
+
+
+/* -------------------------------*/
+/* ------- Media Querys ----------*/
+/* -------------------------------*/
+/* ----------- +500 --------------*/
+/* -------------------------------*/
+@media (min-width: 500px){
+    article div.main-article{
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    .top-nav{
+        flex-direction: row;
+    }
+
+    .submit-search,
+    .input,
+    .top-span-2,
+    header ul li a{
+        font-size: 20px;
+    }
+
+    h3{
+        font-size: 24px;
+    }
+
+    .price{
+        font-size: 19px;
+    }
+
+    .discount{
+        font-size: 17px;
+    }
+
+    h5{
+        font-size: 20px;
+    }
+    
+    h6{
+        font-size: 15px;
+    }
+
+    p.cc{
+        font-size: 16px;
+    }
+
+    .label-1{
+        font-size: 15px;
+    }
+
+    .label-op{
+        font-size: 14px;
+    }
+
+    .input-1{
+        font-size: 17px;
+    }
+
+    #nya{
+        width: 70%;
+    }
+    
+    #usr, #psw, #pswr{
+        width: 40%;
+    }
+
+    #e-m{
+        width: 42%;
+    }
+
+    #pic, #psws{
+        flex-direction: row;
+    }
+
+    div.buttons-block{
+        flex-direction: row;
+    }
+}
+
+/* -------------------------------*/
+/* ------- Media Querys ----------*/
+/* -------------------------------*/
+/* ----------- +769 --------------*/
+/* -------------------------------*/
+@media (min-width: 769px){
+    article div.main-article{
+        flex-direction: column;
+    }
+    main section div.products article{
+        width: 22%;
+    }
+    #nya{
+        width: 20em;
+    }
+    #dom{
+        width: 30em;
+    }
+    #usr, #psw, #pswr{
+        width: 11em;
+    }
+    #e-m{
+        width: 12em;
+    }
+    #img{
+        width: 10em;
+    }
+    #psws{
+        width: 33em;
+    }
+    #cat, #but{
+        width: 33em;
+    }
+}
+
+/* -------------------------------*/
+/* ------- Media Querys ----------*/
+/* -------------------------------*/
+/* ----------- +1010 -------------*/
+/* -------------------------------*/
+@media (min-width: 1010px){
+    article div.main-article{
+        flex-direction: row;
+    }
+}

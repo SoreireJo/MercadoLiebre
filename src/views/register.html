@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>MercadoLiebre</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/styles.css">
+
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+        <!-- Fontawesome -->
+        <link href="/fontawesome6/css/fontawesome.css" rel="stylesheet">
+        <link href="/fontawesome6/css/brands.css" rel="stylesheet">
+        <link href="/fontawesome6/css/solid.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <!-- header -->
+        <header>
+
+            <!-- header__div -->
+            <div class="top-header">
+
+                <!-- header__div--logo (Logo)-->
+                <div class="logo"> 
+
+                    <img src="images/logo-mercado-liebre.svg" alt="Logo de MercadoLiebre">
+
+                </div>
+
+                <!-- header__div--form (Lugar para la barra de búsquedas) -->
+                <div class="form-search" action="#" method="GET"">
+
+                    <div class="submit-search">
+                        <div class="input-search">Buscar productos, marcas y más</div>
+
+                        <div class="bocadito"></div>
+
+                        <span class="iconito-search">
+                        <i class="fa-solid fa-magnifying-glass  fa-beat" style="--fa-animation-duration: 5s;"></i> 
+                        </span>
+                    </div>
+                </div>
+
+                <div class="linea"></div>
+
+                <!-- header__div--p (Compra c/s tarjeta de crédito)-->
+                <p>
+                    <span class="iconito">
+                        <i class="fa-solid fa-hand-holding-dollar fa-bounce" style="--fa-animation-duration: 1.5s;"></i>
+                    </span>
+                    <span class="top-span-2">
+                        Comprá en cuotas y sin tarjeta de crédito
+                    </span>
+                </p>
+
+            </div>
+
+            <div class="linea"></div>
+
+            <!-- header__nav (Barra de navegación)-->
+            <nav class="top-nav">
+
+                <!-- header__nav--ul-1 (Primera tanda de opciones)-->
+                <ul class="top-ul-1">
+                    <li class="top-li-1"><a href="/">Ofertas <i class="fa-solid fa-money-bill-1-wave"></i></a></li>
+                    <li class="top-li-1"><a href="#">Tiendas Oficiales <i class="fa-solid fa-store"></i></a></li>
+                    <li class="top-li-1"><a href="#">Vender <i class="fa-brands fa-shopify"></i></a></li>
+                    <li class="top-li-1"><a href="#">Ayuda <i class="fa-solid fa-circle-question"></i></a></li>
+                </ul>
+                <div class="linea"></div>
+                
+                <div class="p2">
+                    <div class="linea"></div>
+                    <!-- header__nav--ul-2 (Segunda tanda de opciones)-->
+                    <ul class="top-ul-2">
+                        <li class="top-li-2"><a href="#">Creá tu cuenta <i class="fa-solid fa-address-card fa-flip" style="--fa-animation-duration: 3s";></i></a></li>
+                        <li class="top-li-2"><a href="/login">Ingresá <i class="fa-solid fa-right-to-bracket fa-beat" style="--fa-animation-duration: 2s;"></i></a></li>
+                        <li class="top-li-2"><a href="#">Mis compras <i class="fa-solid fa-basket-shopping"></i></a></li>
+                    </ul>
+                    <div class="linea"></div>
+                </div>
+            </nav>
+
+            <div class="linea"></div>
+            
+            <div class="burger-menu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <div class="linea"></div>
+            <div class="linea"></div>
+        </header>
+
+
+        <main class="register">
+            <form class="reg" action="#" method="post">
+
+                <div class="title-block">
+                    <h3>Registrá tus datos</h3>
+                    <div class="bocadito"></div>
+                    <i class="fa-solid fa-user-pen fa-flip" style="--fa-animation-duration: 2.8s;"></i>
+                </div>
+
+                <div class="linea"></div>
+                <div class="linea"></div>
+
+                <!-- ■ Nombre y apellido -->
+                <div class="input-block" id="nya">
+                    <label class="label-1" for="name">Nombre y Apellido</label>
+                    <input class="input-1" type="text" name="name" id="name" required>
+                    <div class="linea"></div>
+                </div>
+
+                <!-- ■ Nombre de usuario -->
+                <div class="input-block" id="usr">
+                    <label class="label-1" for="user">Usuario</label>
+                    <input class="input-1" type="text" name="user" id="user" required>
+                    <div class="linea"></div>
+                </div>
+
+                <!-- ■ Email -->
+                <div class="input-block" id="e-m">
+                    <label class="label-1" for="e-mail">E-mail</label>
+                    <input class="input-1" type="text" name="e-mail" id="e-mail" required>
+                    <div class="linea"></div>
+                </div>
+
+                <!-- ■ Fecha de nacimiento -->
+                <div class="input-block" id="nac">
+                    <label class="label-1" for="birth">Fecha de Nacimiento</label>
+                    <input class="input-1" type="date" name="birth" id="birth" required>
+                    <div class="linea"></div>
+                </div>
+
+                <!-- ■ Domicilio -->
+                <div class="input-block" id="dom">
+                    <label class="label-1" for="domicilio">Domicilio</label>
+                    <input class="input-1" type="text" name="domicilio" id="domicilio" required>
+                    <div class="linea"></div>
+                </div>
+
+
+                <div class="subtitle-block">
+                    <div class="linea"></div>
+                    <h5>Perfil</h5>
+                    <div class="linea"></div>
+                </div>
+
+                <!-- ■ Perfil del usuario (consultar a l@s usuari@s si quieren comprar o vender) -->
+                <!-- como los 2 radio buttons tienen el mismo nombre "profile" solo se selecciona uno solo de los radios -->
+                <div class="options-block" id="prof">
+                    <div class="option-block" id="op">
+                        <label class="label-op" for="sell">Comprador <i class="fa-solid fa-basket-shopping fa-bounce" style="--fa-animation-duration: 1s;"></i></label>
+                        <div class="media-linea"></div>
+                        <input class="input-1" type="radio" name="profile" id="profile" checked>
+                    </div>
+
+                    <div class="option-block" id="op">
+                        <label class="label-op" for="buy">Vendedor <i class="fa-solid fa-store  fa-beat" style="--fa-animation-duration: 1.6s; font-size: 1.2em;"></i> </label>
+                        <div class="media-linea"></div>
+                        <input class="input-1" type="radio" name="profile"  id="profile">
+                    </div>
+                </div>
+
+
+                <div class="subtitle-block">
+                    <div class="linea"></div>
+                    <h5>Intereses</h5>
+                    <div class="linea"></div>
+                </div>
+
+                <!-- ■ Categorías de interés (puede elegir más de una) -->
+                <div class="options-block" id="cat">
+
+                    <!-- ● Electro -->
+                    <div class="option-block" id="op">
+                        <label class="label-1" for="cat_electro">Electro <i class="fa-solid fa-tablet-screen-button"></i></label>
+                        <div class="media-linea"></div>
+                        <input class="input-1" type="checkbox" name="cat_electro" id="cat_electro">
+                    </div>
+
+                    <div class="bocadito"></div>
+
+                    <!-- ● Moda -->
+                    <div class="option-block" id="op">
+                        <label class="label-1" for="cat_moda">Moda <i class="fa-solid fa-shirt"></i></label>
+                        <div class="media-linea"></div>
+                        <input class="input-1" type="checkbox" name="cat_moda" id="cat_moda">
+                    </div>
+
+                    <div class="bocadito"></div>
+
+                    <!-- ● Hogar -->
+                    <div class="option-block" id="op">
+                        <label class="label-1" for="cat_hogar">Hogar <i class="fa-solid fa-house-chimney"></i></label>
+                        <div class="media-linea"></div>
+                        <input class="input-1" type="checkbox" name="cat_hogar" id="cat_hogar">
+                    </div>
+
+                    <div class="bocadito"></div>
+
+                    <!-- ● Juguetería -->
+                    <div class="option-block" id="op">
+                        <label class="label-1" for="cat_jugueteria">Juguetería <i class="fa-solid fa-volleyball"></i></label>
+                        <div class="media-linea"></div>
+                        <input class="input-1" type="checkbox" name="cat_jugueteria" id="cat_jugueteria">
+                    </div>
+
+                    <div class="bocadito"></div>
+
+                    <!-- ● Vida sana -->
+                    <div class="option-block" id="op">
+                        <label class="label-1" for="cat_vidasana">Vida sana <i class="fa-solid fa-person-running"></i></label>
+                        <div class="media-linea"></div>
+                        <input class="input-1" type="checkbox" name="cat_vidasana" id="cat_vidasana">
+                    </div>
+                </div>
+                <div class="linea"></div>
+
+                <div class="subtitle-block">
+                    <div class="linea"></div>
+                    <h5>Imagen</h5>
+                    <div class="linea"></div>
+                </div>
+
+                <!-- ■ Foto de usuario -->
+                <div class="options-block" id="pic">
+                    <div class="option-block">
+                        <label class="label-1">Subí una imagen...</label>
+                        <button class="button-form" id="up-img" type="button"><i class="fa-solid fa-image"></i> Seleccionar archivo</button>
+                    </div>
+
+                    <div class="option-block" id="img">
+                        <i class="fa-solid fa-user fa-4x fa-flip" style="--fa-animation-duration: 3.5s;"></i>
+                        <label class="label-1" for="user_img">Imagen actual</label>
+                    </div>
+                </div>
+
+
+                <div class="subtitle-block">
+                    <div class="linea"></div>
+                    <h5>Contraseña</h5>
+                    <div class="linea"></div>
+                </div>
+
+                <!-- ■ Contraseñas... -->
+                <div class="options-block" id="psws">
+                    <!-- ■ Contraseña -->
+                    <div class="input-block" id="psw">
+                        <label class="label-1" for="passw">Elegí tu contraseña</label>
+                        <input class="input-1" type="password" name="passw" id="passw" required>
+                    </div>
+
+                    <div class="bocadito"></div>
+                    <div class="linea"></div>
+
+                    <!-- ■ Confirmar contraseña -->
+                    <div class="input-block" id="pswr">
+                        <label class="label-1" for="passc">Repetí la contraseña</label>
+                        <input class="input-1" type="password" name="passc" id="passc" required>
+                    </div>
+                </div>
+
+                <div class="linea"></div>
+                <div class="linea"></div>
+                <div class="linea"></div>
+
+                <!-- ■ Botones -->
+                <div class="buttons-block" id="but">
+                    <!-- ■ Botón de borrar todos los datos del formulario -->
+                    <button class="button-form" type="reset" id="cancel"><i class="fa-solid fa-rectangle-xmark"></i> Anular</button>
+
+                    <div class="linea"></div>
+
+                    <!-- ■ Botón de enviar que nos lleve a la página principal -->
+                    <button class="button-form" type="submit" id="ok"><i class="fa-solid fa-user-check"></i> Registrarse</button>
+                </div>
+            </form>
+        </main>
+
+
+        <!-- Pie de Página -->
+        <footer>
+            <nav>
+                <ul>
+                    <!-- class="foot-li" -->
+                    <li class="foot-li">
+                        <a href="#">
+                            <i class="fa-solid fa-credit-card  fa-beat" style="--fa-animation-duration: 2s; font-size: 1.2em;"></i> 
+                            <h5>Pagá con tarjeta o en efectivo</h5>
+                        </a>
+                        <p class="cc">Con Mercado Liebre Cash, tenés cuotas sin interés con tarjeta o efectivo en puntos de pago. ¡Y siempre es seguro!
+                        </p>
+                    </li>
+                    <li class="foot-li">
+                        <a href="#">
+                            <i class="fa-solid fa-gift fa-bounce" style="--fa-animation-duration: 1s;"></i>
+                            <h5>Envio gratis desde $ 2.500</h5>
+                        </a>
+                        <p class="cc">Solo por estar registrad@ en Mercado Liebre tenés envíos gratis en miles de productos. Es un beneficio de Mercado Puntos.
+                        </p>
+                    </li>
+                    <li class="foot-li">
+                        <a href="#">
+                            <i class="fa-solid fa-user-shield fa-flip" style="--fa-animation-duration: 3s;"></i>
+                            <h5>Seguridad, de principio a fin</h5>
+                        </a>
+                        <p class="cc">¿No te gusta? ¡Devolvelo! En Mercado Liebre, no hay nada que no puedas hacer, porque estás siempre protegid@.
+                        </p>
+                    </li>
+                </ul>
+            </nav>
+        </footer>
+        <div class="sub-footer">
+            <h6>Copyright © 1999-2022 MercadoLiebre S.R.L.</h6>
+        </div>
+    </body>
+</html>
