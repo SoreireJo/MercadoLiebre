@@ -439,6 +439,15 @@ div.input-block #prof{
     margin: .5em;
 }
 
+.input-search {
+    width: 95%;
+}
+
+.input-search input{
+    width: 94%;
+    font-size: 14;
+}
+
 
 /* --------------------------------*/
 /* -- Basado en tu Última Visita --*/
@@ -722,6 +731,10 @@ article div.main-article{
 
     .top-nav{
         flex-direction: row;
+    }
+
+    .input-search{
+        width: 18em;
     }
 
     .submit-search,
