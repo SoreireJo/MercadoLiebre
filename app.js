@@ -6,8 +6,8 @@ app.use(express.static('public'));
 
 
 // Inicia el servidor en el puerto 3030
-app.listen(3030, ()=>{
-    console.log('Mercado Liebre 1.0.1dh corriendo en el puerto 3030');
+app.listen(process.env.PORT || 3030, ()=>{
+    console.log('Mercado Liebre 1.0.1 corriendo en la nube, o local puerto 3030');
 });
 
 // Atiende la vista home
@@ -23,9 +23,4 @@ app.get('/register', (req,res)=>{
 // Atiende la vista login
 app.get('/login', (req,res)=>{
     res.sendFile(__dirname + '/src/views/login.html');
-});
-
-// Atiende la vista search
-app.get('/ej', (req,res)=>{
-    res.sendFile(__dirname + '/src/views/ej.html');
 });

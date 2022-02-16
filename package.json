@@ -1,7 +1,7 @@
 {
-  "name": "html_css",
-  "version": "1.0.0",
-  "description": "",
+  "name": "mercadoliebre",
+  "version": "1.0.1",
+  "description": "Trabajo Práctico individual para Dígital House",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

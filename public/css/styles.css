@@ -1,5 +1,4 @@
-/*
-Paleta de colores:
+/* Paleta de colores propuesta:
 
 Amarillo: #EAC926;
 Azul: #03264C;
@@ -10,14 +9,15 @@ Verde: #39b54a;
 */
 
 :root{
+    /* Mi paleta de colores */
     --color-mliebre-back: #EAC926;
     --color-body-back: #ebebeb;
     --color-item: black;
     --color-select-option: #0407b9;
-    --color-select-option-shdw: rgb(36, 25, 99);
+    --color-select-option-shdw: rgb(20, 3, 114);
     --color-select-border: #3f3d3d;
     --color-button-item: white;
-    --color-button:#140a6d;
+    --color-button:#0d0172;
     --color-button-form:#d8d8d5;
     --color-input-back: #dfdddd;
     --color-input-border: rgb(18, 10, 126);
@@ -39,6 +39,8 @@ Verde: #39b54a;
 *{
     margin: 0px;
     padding: 0px;
+    text-decoration: none;
+    list-style: none;
     font-size: 20px;
     box-sizing: border-box;
 }
@@ -82,10 +84,10 @@ div.top-header{
 } 
 
 
-/* -----------------------------------*/
-/* - Buscar productos, marcas y mas  -*/
-/* -----------------------------------*/
-div.form-search{
+/* ------------------------*/
+/* ----- Search Bar  ------*/
+/* ------------------------*/
+form.form-search{
     width: 100%;
     margin-top: 10px;
     display: flex;
@@ -97,8 +99,8 @@ div.form-search{
 header .form-search .submit-search{
     display: flex;
     flex-direction: row;
-    border-radius: 7px;
-    padding: 2px 2px 2px 5px;
+    border-radius: 12px;
+    padding: 3px 3px 3px 5px;
     font-size: 16px;
     background-color: var(--color-search-back);
     border: solid 1px var(--color-select-border);
@@ -125,9 +127,9 @@ header div.top-header p{
 }
 
 
-/* -------------------------------*/
-/* ----------- logo --------------*/
-/* -------------------------------*/
+/* ---------------------------*/
+/* --------- logo ------------*/
+/* ---------------------------*/
 header div.logo,
 header .form{
     width: 50%;
@@ -140,10 +142,10 @@ header div.logo{
     width: 19rem;
 }
 
-top-span-2{
-    font-size: 15px;
-}
 
+/* ---------------------------*/
+/* -------- iconitos ---------*/
+/* ---------------------------*/
 span.iconito{
     padding: 5px;
 }
@@ -165,6 +167,7 @@ p:hover span.iconito{
     flex-direction: column;
     justify-content: space-evenly;
     color: var(--color-item);
+    margin: auto;
 }
 
 .p2{
@@ -174,20 +177,14 @@ p:hover span.iconito{
 }
 
 
-header ul li{
-    list-style-type: none;
-}
-
-
 header ul li a{
-    text-decoration: none;
     padding: 5px;
     border-radius: 7px;
     color: var(--color-item);
 }
 
 
-.top-span-2, .input-search,
+.top-span-2,
 header ul li a{
     font-size: 16px;
 }
@@ -255,9 +252,9 @@ div.burger-menu i:hover{
 }   
 
 
-/* --------------*/
+/* ---------------*/
 /* --- Banners ---*/
-/* --------------*/
+/* ---------------*/
 section.banner img{
     width: 100%;
 }
@@ -317,6 +314,10 @@ section.banner-med img{
 
 .input-1:focus {
     border: 4px solid var(--color-select-option);
+}
+
+.input-search:focus {
+    border: 0px solid var(--color-select-option);
 }
 
 div.input-block{
@@ -440,7 +441,10 @@ div.input-block #prof{
 }
 
 .input-search {
-    width: 95%;
+    width: 100%;
+    font-size: 15px;
+    border: 0px;
+    padding: 2px 3px;
 }
 
 .input-search input{
@@ -451,7 +455,7 @@ div.input-block #prof{
 
 /* --------------------------------*/
 /* -- Basado en tu Última Visita --*/
-/* -------------------------------*/
+/* --------------------------------*/
 main{
     width: 90%;
     margin: 0 auto;
@@ -528,17 +532,13 @@ h3{
     font-weight: normal;
 }
 
-
-main section article.description {
-    display:"none";
-}
-
-
+/* Ahora si salí! */
 main section article:hover .description {
     display:"block";
     color: var(--color-article-title);
     font-size: 16px;
     margin-top: 20px;
+    transition: .5s;
 }
 
 
@@ -565,19 +565,6 @@ main section article i{
     top: -15px;
 }
 
-/*
-.icon::before {
-    display: inline-block;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-}
-
-// Step 2: Reference Individual Icons //
-main section article i::before {
-    font: var(--fa-font-solid);
-    content: "\f007";
-}
-*/
 
 main section article:hover i{
     transition: transform .8s;
@@ -613,7 +600,6 @@ footer ul{
 }
 
 footer ul li{
-    list-style-type: none;
     margin-left: 10px;
     margin-right: 10px;
 }
@@ -663,6 +649,7 @@ article div.main-article{
 /* ----------- -250 --------------*/
 /* -------------------------------*/
 @media (min-width: 250px){
+    /* Modo mobile, mínima expresión */
     main section article:hover .description2{
         display: inline; 
     }
@@ -684,6 +671,8 @@ article div.main-article{
 /* ----------- +360 --------------*/
 /* -------------------------------*/
 @media (min-width: 361px){
+    /* Para la vista de productos modo mobile  */
+    /* mostrando 1 producto por fila           */
     main section article:hover .description2{
         display: inline; 
     }
@@ -724,6 +713,10 @@ article div.main-article{
 /* ----------- +500 --------------*/
 /* -------------------------------*/
 @media (min-width: 500px){
+    /* Aquí pasamos los fonts a tamaño dsk */
+    /* Se expande top-nav                  */
+    /* Control extra en flexs              */
+    /* de vista de productos               */
     article div.main-article{
         flex-wrap: wrap;
         flex-direction: row;
@@ -735,10 +728,10 @@ article div.main-article{
 
     .input-search{
         width: 18em;
+        font-size: 16px;
     }
 
     .submit-search,
-    .input,
     .top-span-2,
     header ul li a{
         font-size: 20px;
@@ -807,11 +800,23 @@ article div.main-article{
 /* ----------- +769 --------------*/
 /* -------------------------------*/
 @media (min-width: 769px){
+    /* Aquí controlamos que algunos elementos, */
+    /* ej. inputs y top-nav no crezcan tanto,  */
+    /* También un control extra en flexs       */
+    /* de vista de varios productos            */
     article div.main-article{
         flex-direction: column;
     }
     main section div.products article{
         width: 22%;
+    }
+    .top-nav{
+        width: 40em;
+    }    
+    .submit-search,
+    .top-span-2,
+    header ul li a{
+        font-size: 22px;
     }
     #nya{
         width: 20em;
@@ -831,8 +836,11 @@ article div.main-article{
     #psws{
         width: 33em;
     }
-    #cat, #but{
+    #cat{
         width: 33em;
+    }
+    #but{
+        width: 24em;
     }
 }
 
@@ -842,6 +850,9 @@ article div.main-article{
 /* ----------- +1010 -------------*/
 /* -------------------------------*/
 @media (min-width: 1010px){
+    /* Aquí algunos flex column pasan a row */
+    /* para un modo desktop total           */
+
     article div.main-article{
         flex-direction: row;
     }
