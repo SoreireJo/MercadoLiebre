@@ -30,8 +30,8 @@ Verde: #39b54a;
     --color-article-title: #666;
     --color-article-title-shdw: rgb(100,100,100);
     --color-discount: #39b54a;
-    --color-footer-back: var(--color-mliebre-back);
-    --color-footer-item: var(--color-item);
+    --color-footer-back: white;
+    --color-footer-item: #1259c3;
     --color-footer-item-select: var(--color-select-option);
 }
 
@@ -39,10 +39,13 @@ Verde: #39b54a;
 *{
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+
     text-decoration: none;
     list-style: none;
-    font-size: 20px;
-    box-sizing: border-box;
+    font-size: 16px;
+    
 }
 
 .linea{ height: .8rem; }
@@ -53,13 +56,13 @@ Verde: #39b54a;
 
 
 body{
-    font-family: 'Roboto', sans-serif;
+    
     background-color: var(--color-body-back);
 }
 
 
 h3{
-    font-size: 20px;
+    font-size: 24px;
 }
 
 p{
@@ -73,7 +76,8 @@ p{
 header {
     background-color: var(--color-mliebre-back);
     margin: 0px;
-    padding: 0px;
+    /* padding: 0px; */
+    padding: 0px 0px 15px 0px;
     height: auto;
 }
 div.top-header{
@@ -82,7 +86,12 @@ div.top-header{
     padding: 20px;
     justify-content: space-around;
 } 
-
+container-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
 
 /* ------------------------*/
 /* ----- Search Bar  ------*/
@@ -126,14 +135,13 @@ header div.top-header p{
     margin-top: 20px;
 }
 
-
 /* ---------------------------*/
 /* --------- logo ------------*/
 /* ---------------------------*/
 header div.logo,
 header .form{
     width: 50%;
-    padding: 0px 0px 0px 0px;
+    padding: 5px;
 }
 
 
@@ -164,13 +172,25 @@ p:hover span.iconito{
 /* ----------------------------*/
 .top-nav{
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+    flex-direction: row;
+    justify-content: left;
     color: var(--color-item);
-    margin: auto;
+    /* margin: auto; */
+}
+
+p1{
+    align-items: flex-start;
+    flex-basis: 65%;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    /* margin-left: 20px; */
+    align-items: top;
+    width: auto;
 }
 
 .p2{
+    align-items: flex-end;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -193,9 +213,11 @@ header ul li a{
     height: 8rem;
     border-radius: 7px;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: left;
+    align-items: left;
+    width: auto;
 }
 
 
@@ -226,12 +248,13 @@ header .nav .li {
 
 
 /* ----------------------------*/
-/* ------- Burguer Menu -------*/
+/* ------- Burger Menu -------*/
 /* ----------------------------*/
 div.burger-menu{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 15px;
 }
 
 div.burger-menu i{
@@ -611,12 +634,13 @@ footer{
 }
 
 ul li.foot-li a{
-    color: var(--color-footer-item);
+    color: black;
 }
 
 ul li.foot-li a i{
+    color: var(--color-footer-item);
     margin-bottom: 10px;
-    font-size: 1.45em;
+    font-size: 2em;
 }
 
 ul li.foot-li:hover i{
@@ -628,8 +652,8 @@ ul li.foot-li:hover i{
 .sub-footer{
     width: 100%;
     padding: 7px;
-    background-color: var(--color-button);
-    color: var(--color-button-item);
+    background-color:#ebebeb;
+    color: #666;
 }
 
 
@@ -673,6 +697,18 @@ article div.main-article{
 @media (min-width: 361px){
     /* Para la vista de productos modo mobile  */
     /* mostrando 1 producto por fila           */
+    header nav {
+        display: none;
+    }
+    
+    .burger-menu {
+        display: block;
+    }
+    
+    .burger-menu i {
+        align-items: center;
+    }
+
     main section article:hover .description2{
         display: inline; 
     }
@@ -816,8 +852,36 @@ article div.main-article{
     .submit-search,
     .top-span-2,
     header ul li a{
-        font-size: 22px;
+        font-size: 18px;
     }
+
+    div.top-header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+    }
+    
+    header nav {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: space-around;
+        padding-bottom: 10px;
+    }
+    
+    header nav ul li {
+        display: inline;
+        margin-right: 30px;
+        margin-left: 30px;
+    }
+
+    header {
+        padding: 0px 0px 0px 0px;
+    }
+    
     #nya{
         width: 20em;
     }
@@ -841,6 +905,9 @@ article div.main-article{
     }
     #but{
         width: 24em;
+    }
+    div.burger-menu, div.burger-menu i {
+        display: none;
     }
 }
 
