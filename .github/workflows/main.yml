@@ -35,3 +35,12 @@ jobs:
 
     - name: steps
       run: echo '${{ toJSON(steps) }}'
+
+    - name: runner
+      run: echo '${{ toJSON(runner) }}'
+
+    - name: strategy
+      run: echo '${{ toJSON(strategy) }}'
+
+    - name: matrix
+      run: echo '${{ toJSON(matrix) }}'
