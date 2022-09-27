@@ -1,28 +1,50 @@
-name: Node.js CI
-
+name: Trabajo Práctico CI en repo con Node.js
 on:
   push:
-    branches: [ "main", "develop", "feature_test" ]
+    branches: [ "main", "develop", "feature_test", "feature_next" ]
   pull_request:
-    branches: [ "main", "develop" ]
+    branches: [ "main", "develop", "feature_test", "feature_next" ]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     strategy:
       matrix:
         node-version: [14.x, 16.x, 18.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
     - uses: actions/checkout@v3
-    - name: Use Node.js ${{ matrix.node-version }}
+
+    - name: Corriendo Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: npm ci
-    - run: npm run build --if-present
-    - run: npm test
+
+    - name: Instalando dependencias presentes en package-lock.json...
+      run: npm ci
+
+    - name: Buildeando si está definido en package.json...
+      run: npm run build --if-present
+
+    - name: Ejecutando el poderoso supertest...
+      run: npm test
+
+    - name: Workflow contexto de GitHub
+        id: github_context_step
+        run: echo '${{ toJSON(github) }}'
+
+    - name: Workflow contexto del job
+        run: echo '${{ toJSON(job) }}'
+
+    - name: Workflow contexto de steps
+        run: echo '${{ toJSON(steps) }}'
+
+    - name: Workflow contexto del runner
+        run: echo '${{ toJSON(runner) }}'
+
+    - name: Workflow contexto de la strategy
+        run: echo '${{ toJSON(strategy) }}'
+
+    - name: Workflow contexto de la matrix
+        run: echo '${{ toJSON(matrix) }}'

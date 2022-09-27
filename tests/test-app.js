@@ -1,3 +1,7 @@
+// Perdón, este test es cualquiera, recién estoy aprendiendo
+// solo busca pasar!
+// prometo para la próxima versión hacer algo mas decente!
+//
 // Assert style...
 var assert = require('chai').assert;
 var numbers = [1, 2, 3, 4, 5];
