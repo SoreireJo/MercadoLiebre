@@ -34,4 +34,4 @@ jobs:
       run: echo '${{ toJSON(github) }}'
 
     - name: Ahora x duplicado 
-        run: echo '${{ toJSON(github) }}'
+      run: echo 'What?'
