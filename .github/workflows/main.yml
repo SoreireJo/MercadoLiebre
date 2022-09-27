@@ -30,21 +30,4 @@ jobs:
     - name: Ejecutando el poderoso supertest...
       run: npm test
 
-    - name: Workflow contexto de GitHub
-        id: github_context_step
-        run: echo '${{ toJSON(github) }}'
-
-    - name: Workflow contexto del job
-        run: echo '${{ toJSON(job) }}'
-
-    - name: Workflow contexto de steps
-        run: echo '${{ toJSON(steps) }}'
-
-    - name: Workflow contexto del runner
-        run: echo '${{ toJSON(runner) }}'
-
-    - name: Workflow contexto de la strategy
-        run: echo '${{ toJSON(strategy) }}'
-
-    - name: Workflow contexto de la matrix
-        run: echo '${{ toJSON(matrix) }}'
+  
