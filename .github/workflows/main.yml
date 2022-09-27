@@ -30,5 +30,20 @@ jobs:
     - name: Ejecutando el poderoso supertest...
       run: npm test
 
-    - name: Dump GitHub context
-      run: echo '${{ toJSON(github) }}'
+    - name: Dump Json sobre el contexto de GitHub
+        run: echo '${{ toJSON(github) }}'
+
+    - name: Dump Json sobre el contexto del job
+        run: echo '${{ toJSON(job) }}'
+
+    - name: Dump Json sobre el contexto de steps
+        run: echo '${{ toJSON(steps) }}'
+
+    - name: Dump Json sobre el contexto del runner
+        run: echo '${{ toJSON(runner) }}'
+
+    - name: Dump Json sobre el contexto de la strategy
+        run: echo '${{ toJSON(strategy) }}'
+
+    - name: Dump Json sobre el contexto de la matrix
+        run: echo '${{ toJSON(matrix) }}'
