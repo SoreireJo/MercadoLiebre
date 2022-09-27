@@ -1,4 +1,4 @@
-// Assert style..
+// Assert style...
 var assert = require('chai').assert;
 var numbers = [1, 2, 3, 4, 5];
 
