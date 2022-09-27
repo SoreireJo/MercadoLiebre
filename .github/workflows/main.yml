@@ -13,9 +13,10 @@ jobs:
         node-version: [14.x, 16.x, 18.x]
 
     steps:
-    - uses: actions/checkout@v3
+    - name: Inicializando iteración del worflow
+      uses: actions/checkout@v3
 
-    - name: Corriendo Node.js ${{ matrix.node-version }}
+    - name: Esta iteración corre sobre Node.js ver. ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
@@ -24,17 +25,17 @@ jobs:
     - name: Instalando dependencias presentes en package-lock.json...
       run: npm ci
 
-    - name: Buildeando si está definido en package.json...
+    - name: Acción Build, solo si está definido en package.json
       run: npm run build --if-present
 
     - name: Ejecutando el poderoso supertest...
       run: npm test
 
-    - name: Log Info global de contexto GitHub action
+    - name: Info global de contexto de este GitHub Action... (desplegar)
       run: echo '${{ toJSON(github) }}'
 
-    - name: Log Info sobre el runner (OS, y paths de trabajo, temporal y cache)
+    - name: Info sobre el runner (OS, y paths de trabajo, temporal y cache)... (desplegar)
       run: echo '${{ toJSON(runner) }}'
 
-    - name: Log Info sobre la versión de node iterada para el/los test/s
+    - name: Info sobre la versión de node iterada para el/los test/s... (desplegar)
       run: echo '${{ toJSON(matrix) }}'
