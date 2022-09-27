@@ -30,17 +30,11 @@ jobs:
     - name: Ejecutando el poderoso supertest...
       run: npm test
 
-    - name: Dump Json sobre el contexto de este GitHub Action
+    - name: Log Info global de contexto GitHub action
       run: echo '${{ toJSON(github) }}'
 
-    - name: steps
-      run: echo '${{ toJSON(steps) }}'
-
-    - name: runner
+    - name: Log Info sobre el runner (OS, y paths de trabajo, temporal y cache)
       run: echo '${{ toJSON(runner) }}'
 
-    - name: strategy
-      run: echo '${{ toJSON(strategy) }}'
-
-    - name: matrix
+    - name: Log Info sobre la versión de node iterada para el/los test/s
       run: echo '${{ toJSON(matrix) }}'
