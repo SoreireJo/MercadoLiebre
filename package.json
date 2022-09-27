@@ -4,7 +4,7 @@
   "description": "Trabajo Práctico individual para Dígital House",
   "main": "app.js",
   "scripts": {
-    "test": "mocha ./tests",
+    "test": "mocha ./tests --recursive",
     "start": "nodemon app.js"
   },
   "author": "Soreire José Luis",
