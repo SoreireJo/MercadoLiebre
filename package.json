@@ -4,13 +4,17 @@
   "description": "Trabajo Práctico individual para Dígital House",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha ./tests",
     "start": "nodemon app.js"
   },
   "author": "Soreire José Luis",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1",
-    "nodemon": "^2.0.15"
+    "chai": "^4.3.6",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "mocha": "^10.0.0",
+    "nodemon": "^2.0.20"
   }
 }
