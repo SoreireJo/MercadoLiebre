@@ -33,5 +33,5 @@ jobs:
     - name: Dump Json sobre el contexto de este GitHub Action
       run: echo '${{ toJSON(github) }}'
 
-    - name: Ahora x job 
-        run: echo '${{ toJSON(job) }}'
+    - name: Ahora x duplicado 
+        run: echo '${{ toJSON(github) }}'
