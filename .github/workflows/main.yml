@@ -31,11 +31,11 @@ jobs:
     - name: Ejecutando el poderoso supertest...
       run: npm test
 
-    - name: Info global de contexto de este GitHub Action... (desplegar)
+    - name: Reporte global de contexto de este GitHub Action... (desplegar)
       run: echo '${{ toJSON(github) }}'
 
-    - name: Info sobre el runner (nombre, OS, y paths de trabajo, temporal y cache)... (desplegar)
+    - name: Reporte sobre el runner (nombre, OS, y paths de trabajo, temporal y cache)... (desplegar)
       run: echo '${{ toJSON(runner) }}'
 
-    - name: Info sobre la versión de node iterada para el/los test/s... (desplegar)
+    - name: Reporte sobre la versión de node iterada para el/los test/s... (desplegar)
       run: echo '${{ toJSON(matrix) }}'
